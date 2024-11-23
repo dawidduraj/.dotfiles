@@ -1,7 +1,11 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ../../modules/home-manager/hyprland.nix ];
+  # TODO: Improve Imports, move to flake
+  imports = [ 
+  		../../modules/home-manager/hyprland.nix
+  	      	../../modules/home-manager/terminal.nix
+	    ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "dawid";
@@ -23,7 +27,7 @@
     # # "Hello, world!" when run.
     # pkgs.hello
       pkgs.neovim
-
+      pkgs.tmux
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
