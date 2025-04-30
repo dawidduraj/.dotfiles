@@ -11,6 +11,8 @@
       inputs.home-manager.nixosModules.home-manager
     ];
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  environment.sessionVariables.ANKI_WAYLAND = "1";
+  programs.xwayland.enable = true; 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -102,6 +104,7 @@
   # TODO: Write launcher in AGS
   wofi
   vscode
+  firefox
   obs-studio
   remmina
   git
