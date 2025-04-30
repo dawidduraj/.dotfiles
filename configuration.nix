@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      inputs.home-manager.nixosModules.home-manager
     ];
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   # Bootloader.
@@ -32,6 +33,13 @@
 	polarity = "dark";
         targets = {
 	    gtk.enable = true;
+	};
+  };
+
+  home-manager = {
+	extraSpecialArgs = { inherit inputs; };
+	users = {
+		"dawid" = import ./home.nix;
 	};
   };
   # Set your time zone.
@@ -65,7 +73,8 @@
   programs.steam.enable=true;
   #nerdfonts
   fonts.packages = with pkgs; [
-	(nerdfonts.override {fonts = ["FiraCode" "JetBrainsMono"];})
+  	pkgs.nerd-fonts.fira-code
+	pkgs.nerd-fonts.jetbrains-mono
   ];
 
   # Configure console keymap
@@ -93,6 +102,7 @@
   # TODO: Write launcher in AGS
   wofi
   vscode
+  obs-studio
   remmina
   git
   jdk
