@@ -103,12 +103,14 @@
   environment.systemPackages = with pkgs; [
   # TODO: Write launcher in AGS
   wofi
+  hyprshot
   vscode
   firefox
   obs-studio
   remmina
   git
   jdk
+  tesseract4
   jetbrains.idea-ultimate
   thunderbird
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
