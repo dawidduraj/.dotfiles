@@ -104,8 +104,11 @@
   # TODO: Write launcher in AGS
   wofi
   hyprshot
+  nodejs
   vscode
   firefox
+  leptonica
+  rPackages.tesseract
   obs-studio
   remmina
   git
