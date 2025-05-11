@@ -114,7 +114,11 @@
   git
   jdk
   tesseract
+  prismlauncher
   jetbrains.idea-ultimate
+  unzip
+  mpv
+  vlc
   thunderbird
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   anki-bin
